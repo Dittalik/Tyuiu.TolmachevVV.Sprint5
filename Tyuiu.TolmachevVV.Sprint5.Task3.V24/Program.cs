@@ -29,12 +29,12 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task3.V24
             string path = service1.SaveToFileTextData(3);
             Console.WriteLine("File is written                                                           *");
             Console.WriteLine("***************************************************************************");
-            double text;
+            string text;
             using (var reader = new BinaryReader(File.Open(path, FileMode.Open), Encoding.UTF8))
             {
-                text = reader.ReadDouble();
+                text = reader.ReadString();
             }
-            Console.WriteLine(text.ToString());
+            Console.WriteLine(text);
             Console.WriteLine("***************************************************************************");
             Console.ReadKey();
         }

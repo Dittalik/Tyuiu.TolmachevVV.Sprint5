@@ -16,7 +16,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task3.V24.Lib
             double result = Math.Round(6.1 * Math.Pow(x, 3) + 0.23 * Math.Pow(x, 2) + 1.04 * x, 3);
             using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
-                binaryWriter.Write(result);
+                binaryWriter.Write(BitConverter.ToString(BitConverter.GetBytes(result)));
             }
             return path;
         }

@@ -29,6 +29,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task0.V29
             Console.WriteLine("***************************************************************************");
             string path = service1.SaveToFileTextData(3);
             Console.WriteLine("File is written");
+            Console.WriteLine("Path: " + path);
             Console.WriteLine(File.ReadLines(path).First());
             Console.WriteLine("***************************************************************************");
             Console.ReadKey();

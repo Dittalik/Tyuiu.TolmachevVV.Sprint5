@@ -28,6 +28,8 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task1.V28
             Console.WriteLine("***************************************************************************");
             string path = service1.SaveToFileTextData(-5, 5);
             Console.WriteLine("File is written");
+            Console.WriteLine("Path: " + path);
+            Console.WriteLine("***************************************************************************");
             Console.WriteLine(File.ReadAllText(path));
             Console.WriteLine("***************************************************************************");
             Console.ReadKey();

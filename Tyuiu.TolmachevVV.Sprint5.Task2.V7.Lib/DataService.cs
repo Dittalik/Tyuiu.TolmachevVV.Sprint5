@@ -23,7 +23,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task2.V7.Lib
                     {
                         matrix[i, j] = 0;
                     }
-                    if (count != 2)
+                    if (count != matrix.GetLength(1) - 1)
                     { 
                         buffer += matrix[i, j].ToString() + "\t";
                     }

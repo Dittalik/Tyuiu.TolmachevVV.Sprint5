@@ -17,6 +17,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task3.V24.Lib
             using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
                 binaryWriter.Write(BitConverter.ToString(BitConverter.GetBytes(result)));
+                binaryWriter.Write(result);
             }
             return path;
         }

@@ -43,6 +43,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task2.V7
             Console.WriteLine("***************************************************************************");
             string path = service1.SaveToFileTextData(matrix);
             Console.WriteLine("File is written                                                           *");
+            Console.WriteLine("Path: " + path);
             Console.WriteLine("***************************************************************************");
             Console.WriteLine(File.ReadAllText(path));
             Console.WriteLine("***************************************************************************");

@@ -25,7 +25,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task5.V21
             string path = @"C:\DataSprint5\InPutDataFileTask5V21.txt";
             Console.WriteLine("File path: " + path);
             Console.WriteLine("data is: ");
-            Console.WriteLine(File.ReadAllText(path).Replace('.', ','));
+            Console.WriteLine(String.Join(" ", File.ReadAllLines(path)));
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");

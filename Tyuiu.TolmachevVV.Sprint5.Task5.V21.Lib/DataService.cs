@@ -12,15 +12,13 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task5.V21.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            string[] strNumbs = File.ReadAllText(path).Split(' ');
+            string[] strNumbs = File.ReadAllLines(path);
             int mostX = int.MinValue;
             foreach (string number in strNumbs)
-            {
-                if (int.TryParse(number, out int result) && result % 2 == 0 && result > mostX)
+                if (!number.Contains(',') && int.Parse(number) % 2 == 0 && int.Parse(number) > mostX)
                 {
-                    mostX = result;
+                    mostX = int.Parse(number);
                 }
-            }
             int factX = 1;
             for (int i = 1; i <= mostX; i++)
             {

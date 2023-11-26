@@ -23,7 +23,7 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task7.V12.Test
         [TestMethod]
         public void CalculationTest()
         {
-            Assert.AreEqual(File.ReadAllText(InputPath).ToUpper(), File.ReadAllText(service.LoadDataAndSave(InputPath)));
+            Assert.AreEqual(File.ReadAllText(InputPath).ToUpper() + Environment.NewLine, File.ReadAllText(service.LoadDataAndSave(InputPath)));
         }
     }
 }

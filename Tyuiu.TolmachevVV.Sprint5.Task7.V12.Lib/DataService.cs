@@ -13,7 +13,12 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task7.V12.Lib
         public string LoadDataAndSave(string path)
         {
             string outputpath = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask7V12.txt";
-            File.WriteAllText(outputpath, File.ReadAllText(path).ToUpper());
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line = reader.ReadLine().ToUpper() + Environment.NewLine;
+                File.WriteAllText(outputpath, line);
+            }
             return outputpath;
         }
     }

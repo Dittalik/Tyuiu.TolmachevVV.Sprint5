@@ -12,16 +12,19 @@ namespace Tyuiu.TolmachevVV.Sprint5.Task6.V21.Lib
     {
         public int LoadFromDataFile(string path)
         {
-            string content = File.ReadAllText(path).ToLower();
-            int count = 0;
-            for (int i = 0; i < content.Length; i++)
+            using (StreamReader reader = new StreamReader(path))
             {
-                if (content[i] == 'т' && content[i + 1] == 'т')
+                int count = 0;
+                string content = reader.ReadLine().ToLower();
+                for (int i = 0; i < content.Length; i++)
                 {
-                    count++;
+                    if (content[i] == 'т' && content[i + 1] == 'т')
+                    {
+                        count++;
+                    }
                 }
+                return count;
             }
-            return count;
         }
     }
 }
